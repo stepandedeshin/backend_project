@@ -3,7 +3,6 @@ from pydantic_settings import BaseSettings
 class App(BaseSettings):
     HASHING_KEY: str
     HASHING_ALGORITHM: str
-    REGIONS_URL: str
 
     class Config:
         env_prefix = 'APP_'

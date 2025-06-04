@@ -20,11 +20,10 @@ depends_on: Union[str, Sequence[str], None] = None
 
 def upgrade() -> None:
     """Upgrade schema."""
-    op.create_table('numbers',
-        sa.Column('id', sa.Integer(), nullable=False),
-        sa.Column('number', sa.String(), nullable=False),
-        sa.Column('region', sa.String(), nullable=False),
-        sa.PrimaryKeyConstraint('id')
+    op.create_table('users',
+        sa.Column('id', sa.Integer(), primary_key=True, autoincrement=True),
+        sa.Column('login', sa.String(), nullable=False),
+        sa.Column('hashed_password', sa.String(), nullable=False)
     )
 
 

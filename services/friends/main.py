@@ -1,7 +1,7 @@
 import uvicorn
 
-from core.api_auth_service import app
-from core.logger import auth_logger as logger
+from core.api_friends import app
+from core.logger import friends_logger as logger
 
 
 if __name__ == "__main__":
@@ -9,7 +9,7 @@ if __name__ == "__main__":
         uvicorn.run(
             app=app,
             host="localhost",
-            port=7000
+            port=5004
         )
     except KeyboardInterrupt:
-        logger.info('Exit auth_srvice')
+        logger.info('Exit friends service')

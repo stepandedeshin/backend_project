@@ -20,7 +20,27 @@ def setting_logger(logger: Logger) -> Logger:
 
 
 auth_logger = setting_logger(
-    logger=getLogger('authorization-service')
+    logger=getLogger('auth-service')
+)
+
+admin_logger = setting_logger(
+    logger=getLogger('admin-service')
+)
+
+feed_logger = setting_logger(
+    logger=getLogger('feed-service')
+)
+
+friends_logger = setting_logger(
+    logger=getLogger('friends-service')
+)
+
+messages_logger = setting_logger(
+    logger=getLogger('messages-service')
+)
+
+profile_logger = setting_logger(
+    logger=getLogger('messages-service')
 )
 
 logging.basicConfig(level=INFO)
